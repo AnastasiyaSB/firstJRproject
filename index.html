@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лучшие авиабилеты по низким ценам</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <nav id="information">
-            <ul class="infoList">
-                <li class="infoItem"><a href="#">Корпоративным клиентам</a></li>
-                <li class="infoItem"><a href="#">Авиабилеты</a></li>
-                <li class="infoItem"><a href="#">Справка</a></li>
-                <li class="infoItem"><a href="#">Русский</a></li>
-            </ul>
-        </nav>
-        <section class="Settings"> 
+        <section id="informationContainer">
+            <a class="informationCustomer" href="#">Корпоративным клиентам</a>
+            <div class="infoList">
+                <label for="airTickets">Авиабилеты</label>
+                <select name="airTickets" id="airTickets"></select>
+                <label for="information">Справка</label>
+                <select name="information" id="information"></select>
+                <label for="language">Русский</label>
+                <select name="language" id="language"></select>
+            </div>
+        </section>
+
+        <section class="settings"> 
             <h1>Лучшие авиабилеты по самым низким ценам</h1>
             <div class="selectSearchType">
                 <button class="selectType">Авиабилеты</button>
@@ -26,27 +30,29 @@
                 <button class="selectType">Страхование</button>
             </div>
             <div class="selectSerchSettings">
-                <div class="selectSettings">
-                    <label for="from">Откуда</label> 
-                    <input type="text" id="from">
-                </div>
-                <div class="selectSettings">
-                    <label for="to">Куда</label> 
-                    <input type="text" id="to" placeholder="Куда">
-                </div>
-                <div class="selectSettings">
-                    <label for="departure">Туда</label> 
-                    <input type="text" id="departure" placeholder="Туда">
-                </div>
-                <div class="selectSettings">
-                    <label for="return">Обратно</label> 
-                    <input type="text" id="return" placeholder="Обратно">
-                </div>
-                <div class="selectSettings">
-                    <label for="passengers">Пассажиры, класс</label> 
-                    <input type="text" id="passengers" placeholder="Пассажиры, класс">
-                </div>
-                <button id="serchTicket">Найти</button>
+                <form action="/submit" method="post">
+                    <div class="selectSettings">
+                        <label for="from">Откуда</label> 
+                        <input type="text" id="from">
+                    </div>
+                    <div class="selectSettings">
+                        <label for="to">Куда</label> 
+                        <input type="text" id="to" placeholder="Куда">
+                    </div>
+                    <div class="selectSettings">
+                        <label for="departure">Туда</label> 
+                        <input type="text" id="departure" placeholder="Туда">
+                    </div>
+                    <div class="selectSettings">
+                        <label for="return">Обратно</label> 
+                        <input type="text" id="return" placeholder="Обратно">
+                    </div>
+                    <div class="selectSettings">
+                        <label for="passengers">Пассажиры, класс</label> 
+                        <input type="text" id="passengers" placeholder="Пассажиры, класс">
+                    </div>
+                    <button id="serchTicket">Найти</button>
+                </form>
             </div>
             <div id="extraWay">
                 <p>Сложный маршрут</p>
@@ -295,6 +301,6 @@
     </footer>
 
 
-   <script src="./js/index.js"></script> 
+   <script src="./js/script.js"></script> 
 </body>
 </html>
