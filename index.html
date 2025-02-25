@@ -23,39 +23,71 @@
         <section class="settings"> 
             <h1>Лучшие авиабилеты по самым низким ценам</h1>
             <div class="selectSearchType">
-                <button class="selectType">Авиабилеты</button>
-                <button class="selectType">Ж/д билеты</button>
-                <button class="selectType">Автобусы</button>
-                <button class="selectType">Отели</button>
-                <button class="selectType">Страхование</button>
+                <a href="#" class="selectType">Авиабилеты</a>
+                <a href="#" class="selectType">Ж/д билеты</a>
+                <a href="#" class="selectType">Автобусы</a>
+                <a href="#" class="selectType">Отели</a>
+                <a href="#" class="selectType">Страхование</a>
             </div>
             <div class="selectSerchSettings">
-                <form action="/submit" method="post">
-                    <div class="selectSettings">
-                        <label for="from">Откуда</label> 
-                        <input type="text" id="from">
+                <form action="/" method="post">
+                    <div class="selectSettingsWay">
+                        <div class="selectSettings">
+                            <label for="from">Откуда</label> 
+                            <input type="text" id="from">
+                        </div>
+                        <div class="selectSettings">
+                            <label for="to">Куда</label> 
+                            <input type="text" id="to" placeholder="Куда">
+                        </div>
+                        <div class="selectSettings">
+                            <label for="departure">Туда</label> 
+                            <input type="text" id="departure" placeholder="Туда">
+                        </div>
+                        <div class="selectSettings">
+                            <label for="return">Обратно</label> 
+                            <input type="text" id="return" placeholder="Обратно">
+                        </div>
                     </div>
-                    <div class="selectSettings">
-                        <label for="to">Куда</label> 
-                        <input type="text" id="to" placeholder="Куда">
-                    </div>
-                    <div class="selectSettings">
-                        <label for="departure">Туда</label> 
-                        <input type="text" id="departure" placeholder="Туда">
-                    </div>
-                    <div class="selectSettings">
-                        <label for="return">Обратно</label> 
-                        <input type="text" id="return" placeholder="Обратно">
-                    </div>
-                    <div class="selectSettings">
-                        <label for="passengers">Пассажиры, класс</label> 
-                        <input type="text" id="passengers" placeholder="Пассажиры, класс">
-                    </div>
-                    <button id="serchTicket">Найти</button>
                 </form>
-            </div>
-            <div id="extraWay">
-                <p>Сложный маршрут</p>
+                <div class="selectSettingsPassengers">
+                    <button class="selectSettingsPassengersBtn"><div>Пассажиры, класс <br>1 пассажир, любой</div></button>
+                        <form action="/" method="post">
+                            <p>Максимум 9 пассажиров</p>
+                            <div class="amountPeople">
+                                <div class="selectCategory">Взрослые <small>старше 12 лет</small></div>
+                                <label for="adultPassenger">0</label>
+                                <button class="plus">-</button>
+                                <input type="text" id="adultPassenger">
+                                <button class="minus">+</button>
+                            </div>
+                            <div class="selectCategory">
+                                <div class="agePassenger">Дети <small>2-12 лет</small></div>
+                                <label for="childrenPassenger">0</label>
+                                <button class="plus">-</button>
+                                <input type="text" id="childrenPassenger">
+                                <button class="minus">+</button>
+                            </div>
+                            <div class="selectCategory">
+                                <div class="agePassenger">Младенцы <small>до 2 лет</small></div>
+                                <label for="babyPassenger">0</label>
+                                <button class="plus">-</button>
+                                <input type="text" id="babyPassenger">
+                                <button class="minus">+</button>
+                            </div>
+                            <div class="selectCategory">
+                                <div>Класс</div>
+                                <button class="classSelected">Любой</button>
+                                <button class="classSelected">Бизнес</button>
+                                <button class="classSelected">Эконом</button>
+                            </div>
+                            <button class="confirmCategory">ОК</button>
+                        </form>
+                        <button id="serchTicket">Найти</button>
+                </div>
+                <div id="extraWay">
+                    <p>Сложный маршрут</p>
+                </div>
             </div>
         </section>
     </header>
@@ -69,7 +101,7 @@
                     <li class="opportunityItem">Агентская поддержка</li>
                     <li class="opportunityItem">FAQ</li>
                 </ul>
-                <button id="showOpportunities">Посмотреть возможности</button>
+                <a href="#" id="showOpportunities">Посмотреть возможности</a>
                 <img src="/image/logo.png/message.png" alt="message">
             </article>
             <article class="extraOpportunity">
@@ -78,57 +110,25 @@
                     <li class="opportunityItem">Удобное сравнение цен</li>
                     <li class="opportunityItem">Актуальное расписание</li>
                 </ul>
-                <button id="exstraSerch">Найти билеты</button>
+                <a href="#" id="exstraSerch">Найти билеты</a>
                 <img src="/image/logo.png/bus.png" alt="bus">
             </article>
         </section>
 
         <section id="popularDestinations">
             <h2 class="highText">Популярные направления</h2>
-            <table class="destinations-table">
-                <tbody>
-                    <tr>
-                        <td>Варшава → Милан</td>
-                        <td>от 771 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Лондон</td>
-                        <td>от 1 001 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Аликанте</td>
-                        <td>от 1 424 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Мадрид</td>
-                        <td>от 1 646 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Барселона</td>
-                        <td>от 1 663 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Амстердам</td>
-                        <td>от 3 256 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Лиссабон</td>
-                        <td>от 3 364 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Париж</td>
-                        <td>от 4 077 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Нью-Йорк</td>
-                        <td>от 21 277 €</td>
-                    </tr>
-                    <tr>
-                        <td>Варшава → Денпасар-Бали</td>
-                        <td>от 25 573 €</td>
-                    </tr>
-                </tbody>
-            </table>
+            <ul class="destinationsList">
+                <li class="destinationsItem">Варшава → Милан от 771 €</li>
+                <li class="destinationsItem">Варшава → Лондон от 1 001 €</li>
+                <li class="destinationsItem">Варшава → Аликанте от 1 424 €</li>
+                <li class="destinationsItem">Варшава → Мадрид от 1 646 €</li>
+                <li class="destinationsItem">Варшава → Барселона от 1 663 €</li>
+                <li class="destinationsItem">Варшава → Амстердам от 3 256 €</li>
+                <li class="destinationsItem">Варшава → Лиссабон от 3 364 €</li>
+                <li class="destinationsItem">Варшава → Париж от 4 077 €</li>
+                <li class="destinationsItem">Варшава → Нью-Йорк от 21 277 €</li>
+                <li class="destinationsItem">Варшава → Денпасар-Бали от 25 573 €</li>
+            </ul>
         </section>
 
         <section id="topAirlines">
@@ -145,31 +145,25 @@
                 <li class="airlinesItem">Верджини Атлантик Эйрвэйз 4.5</li>
                 <li class="airlinesItem">Эйр Нью Зиланд 4.5</li>
             </ol>
-            <button id="moreInfoBtn">Подробнее</button>
+            <a href="#" id="moreInfoBtn">Подробнее</a>
         </section>
 
         <section id="hotDeals">
             <h2 class="highText">Горящие распродажи авиарейсов</h2>
-            <div class="deal">
                 <h4 class="lowText">Как найти авиабилеты со скидкой онлайн</h4>
                 <p class="dealDescription">На нашем сайте вы можете купить билеты на самолет или оформить раннее бронирование. Акции, скидки и специальные предложения, которые постоянно предлагают ведущие авиакомпании-лоукостеры, позволяют приобрести недорогие авиабилеты не выходя из дома. Если хотите сэкономить и купить авиабилеты дешевле, обратите внимание на рейсы с пересадками. А вот время как драгоценную валюту для путешественника - помогают сэкономить прямые перелеты, пусть они и стоят дороже билетов с пересадками.</p>
-            </div>
-            <div class="deal">
+
                 <h4 class="lowText">Клиентская поддержка</h4>
                 <p class="dealDescription">Какой билет заказать для ребенка? Где внести данные о визе? Можно ли поменять даты вылета? Как оформить дополнительный багаж? Операторы нашей службы поддержки знают ответы на все вопросы о перелетах. Мы сопровождаем ваши бронирования в режиме 24/7/365, на украинском, русском и английском языках. Всегда поможем подобрать, оплатить или внести изменения в билет быстро и удобно! С помощью удобного поиска сделать заказ авиабилетов по интернету можно дешево и безопасно.</p>
-            </div>
-            <div class="deal">
+
                 <h4 class="lowText">Бонусная программа для постоянных клиентов</h4>
                 <p class="dealDescription">За покупку авиабилетов на нашем сайте вы получите бонусы 1% от суммы транзакции. Накопив достаточное количество баллов, можно оплатить ими билеты на самолет при следующих покупках. Максимальная скидка, которую можно получить благодаря бонусной программе,- 25%.</p>
-            </div>
-            <div class="deal">
+
                 <h4 class="lowText">Самые дешевые авиабилеты</h4>
                 <p class="dealDescription">Как и где купить авиабилеты дешево? Сотрудничество с 750 авиакомпаниями позволяет нам формировать гибкие тарифы и предлагать нашим клиентам лучшие условия. Наш сайт-агрегатор авиарейсов оперативно обрабатывает ваши запросы и выдает все доступные варианты. Вы можете воспользоваться фильтрами и отсортировать предложения по перевозчикам, времени вылета и другим параметрам.</p>
-            </div>
-            <div class="deal">
+
                 <h4 class="lowText">Сравнение цен на авиабилеты</h4>
                 <p class="dealDescription">У нас всегда можно забронировать очень дешевые авиабилеты по Украине, Европе и в другие части мира. Наша система динамики цен определит лучшее время для покупки, а также подскажет высокий и низкий сезон для путешествий по тем или иным маршрутам.</p>
-            </div>
         </section>
 
         <section id="faq">
@@ -192,16 +186,16 @@
             <form action="" method="post" id="receiveEmail">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Email *">
-                <button id="sendEmail"></button>
             </form>
+            <button id="sendEmail">Подписаться</button>
         </aside>
     </main>
     <footer>
         <div>
-            <img src="/image/logo.png/IATA.png" alt="IATA" width="100px" height="100px" class="companyImg">
-            <img src="/image/logo.png/pci-logo.png" alt="PCI" width="126px" height="38px" class="companyImg">
-            <img src="/image/logo.png/visa.png" alt="VISA" width="58px" height="21px" class="companyImg">
-            <img src="/image/logo.png/mastercard-logo.png" alt="MSC" width="44px" height="40px" class="companyImg">
+            <img src="/image/logo.png/IATA.png" alt="IATA" class="companyImg">
+            <img src="/image/logo.png/pci-logo.png" alt="PCI" class="companyImg">
+            <img src="/image/logo.png/visa.png" alt="VISA" class="companyImg">
+            <img src="/image/logo.png/mastercard.png" alt="MSC" class="companyImg">
         </div>
         <div id="footerContainer">
             <div class="sectionCountry">
@@ -287,10 +281,10 @@
             </div>
         </div>
         <div>
-            <div class="footerBtn">
-                <button class="footerBtnProgramm">Партнерская программа</button>
-                <button class="footerBtnStore"><img src="/image/logo.png/google pay.png" alt="google pay"> Google Play</button>
-                <button class="footerBtnStore"><img src="/image/logo.png/apple.png" alt="app Store">App Store</button>
+            <div class="footerLink">
+                <a href="#" class="footerLinkProgramm">Партнерская программа</a>
+                <a href="#" class="footerLinkStore"><img src="/image/logo.png/google pay.png" alt="google pay">Google Play</a>
+                <a href="#" class="footerLinkStore"><img src="/image/logo.png/apple.png" alt="app Store">App Store</a>
             </div>
             <div>
                 <img src="/image/logo.png/facebook.png" alt="facebook" width="40px" height="40px"> 
