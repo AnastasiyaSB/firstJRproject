@@ -58,30 +58,36 @@
                             <p>Максимум 9 пассажиров</p>
                             <div class="amountPeople">
                                 <div class="selectCategory">Взрослые <small>старше 12 лет</small></div>
-                                <label for="adultPassenger">0</label>
                                 <button class="plus">-</button>
-                                <input type="text" id="adultPassenger">
+                                <input type="number" id="adultPassenger" value="0" min="0" max="9" readonly>
                                 <button class="minus">+</button>
                             </div>
                             <div class="selectCategory">
                                 <div class="agePassenger">Дети <small>2-12 лет</small></div>
-                                <label for="childrenPassenger">0</label>
                                 <button class="plus">-</button>
-                                <input type="text" id="childrenPassenger">
+                                <input type="text" id="childrenPassenger" value="0" min="0" max="9">
                                 <button class="minus">+</button>
                             </div>
                             <div class="selectCategory">
                                 <div class="agePassenger">Младенцы <small>до 2 лет</small></div>
-                                <label for="babyPassenger">0</label>
                                 <button class="plus">-</button>
-                                <input type="text" id="babyPassenger">
+                                <input type="text" id="babyPassenger" value="0" min="0" max="9">
                                 <button class="minus">+</button>
                             </div>
                             <div class="selectCategory">
                                 <div>Класс</div>
-                                <button class="classSelected">Любой</button>
-                                <button class="classSelected">Бизнес</button>
-                                <button class="classSelected">Эконом</button>
+                                <div>
+                                    <label for="any">Любой</label>
+                                    <input type="radio" id="any" value="any">
+                                </div>
+                                <div>
+                                    <label for="business">Бизнес</label>
+                                    <input type="radio" id="business" value="business">
+                                </div>
+                                <div>
+                                    <label for="economy">Эконом</label>
+                                    <input type="radio" id="economy" value="economy">
+                                </div>
                             </div>
                             <button class="confirmCategory">ОК</button>
                         </form>
@@ -117,16 +123,16 @@
         <section id="popularDestinations">
             <h2 class="highText">Популярные направления</h2>
             <ul class="destinationsList">
-                <li class="destinationsItem">Варшава → Милан от 771 €</li>
-                <li class="destinationsItem">Варшава → Лондон от 1 001 €</li>
-                <li class="destinationsItem">Варшава → Аликанте от 1 424 €</li>
-                <li class="destinationsItem">Варшава → Мадрид от 1 646 €</li>
-                <li class="destinationsItem">Варшава → Барселона от 1 663 €</li>
-                <li class="destinationsItem">Варшава → Амстердам от 3 256 €</li>
-                <li class="destinationsItem">Варшава → Лиссабон от 3 364 €</li>
-                <li class="destinationsItem">Варшава → Париж от 4 077 €</li>
-                <li class="destinationsItem">Варшава → Нью-Йорк от 21 277 €</li>
-                <li class="destinationsItem">Варшава → Денпасар-Бали от 25 573 €</li>
+                <li class="destinationsItem">Варшава → Милан <span class="price">от 771 €</span></li>
+                <li class="destinationsItem">Варшава → Лондон <span class="price">от 1 001 €</span></li>
+                <li class="destinationsItem">Варшава → Аликанте <span class="price">от 1 424 €</span></li>
+                <li class="destinationsItem">Варшава → Мадрид <span class="price">от 1 646 €</span></li>
+                <li class="destinationsItem">Варшава → Барселона <span class="price">от 1 663 €</span></li>
+                <li class="destinationsItem">Варшава → Амстердам <span class="price">от 3 256 €</span></li>
+                <li class="destinationsItem">Варшава → Лиссабон <span class="price">от 3 364 €</span></li>
+                <li class="destinationsItem">Варшава → Париж <span class="price">от 4 077 €</span></li>
+                <li class="destinationsItem">Варшава → Нью-Йорк <span class="price">от 21 277 €</span></li>
+                <li class="destinationsItem">Варшава → Денпасар-Бали <span class="price">от 25 573 €</span></li>
             </ul>
         </section>
 
