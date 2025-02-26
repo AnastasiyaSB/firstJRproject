@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лучшие авиабилеты по низким ценам</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <section id="informationContainer">
+        <nav id="informationContainer">
             <a class="informationCustomer" href="#">Корпоративным клиентам</a>
             <div class="infoList">
                 <label for="airTickets">Авиабилеты</label>
-                <select name="airTickets" id="airTickets"></select>
+                <select name="airTickets" id="airTickets" class="infoItem"></select>
                 <label for="information">Справка</label>
-                <select name="information" id="information"></select>
+                <select name="information" id="information" class="infoItem"></select>
                 <label for="language">Русский</label>
-                <select name="language" id="language"></select>
+                <select name="language" id="language" class="infoItem"></select>
             </div>
-        </section>
+        </nav>
 
         <section class="settings"> 
             <h1>Лучшие авиабилеты по самым низким ценам</h1>
@@ -26,15 +30,14 @@
                 <a href="#" class="selectType">Авиабилеты</a>
                 <a href="#" class="selectType">Ж/д билеты</a>
                 <a href="#" class="selectType">Автобусы</a>
-                <a href="#" class="selectType">Отели</a>
+                <a href="#" class="selectType" id="hotelSale">Отели</a>
                 <a href="#" class="selectType">Страхование</a>
             </div>
-            <div class="selectSerchSettings">
-                <form action="/" method="post">
-                    <div class="selectSettingsWay">
+            <div class="selectSearchSettings">
+                <form id="directionSetting" action="/" method="post">
                         <div class="selectSettings">
                             <label for="from">Откуда</label> 
-                            <input type="text" id="from">
+                            <input type="text" id="from" placeholder="Откуда">
                         </div>
                         <div class="selectSettings">
                             <label for="to">Куда</label> 
@@ -48,11 +51,10 @@
                             <label for="return">Обратно</label> 
                             <input type="text" id="return" placeholder="Обратно">
                         </div>
-                    </div>
                 </form>
                 <div class="selectSettingsPassengers">
-                    <button class="selectSettingsPassengersBtn"><div>Пассажиры, класс <br>1 пассажир, любой</div></button>
-                        <form action="/" method="post">
+                    <button class="selectSettingsPassengersBtn">Пассажиры, класс <br>1 пассажир, любой</button>
+                        <form id="passengersSetting" action="/" method="post">
                             <p>Максимум 9 пассажиров</p>
                             <div class="amountPeople">
                                 <div class="selectCategory">Взрослые <small>старше 12 лет</small></div>
@@ -83,11 +85,8 @@
                             </div>
                             <button class="confirmCategory">ОК</button>
                         </form>
-                        <button id="serchTicket">Найти</button>
                 </div>
-                <div id="extraWay">
-                    <p>Сложный маршрут</p>
-                </div>
+                <button id="serchTicket">Найти</button>
             </div>
         </section>
     </header>
@@ -186,8 +185,8 @@
             <form action="" method="post" id="receiveEmail">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Email *">
-            </form>
-            <button id="sendEmail">Подписаться</button>
+                <button id="sendEmail">Подписаться</button>
+            </form>  
         </aside>
     </main>
     <footer>
@@ -199,6 +198,13 @@
         </div>
         <div id="footerContainer">
             <div class="sectionCountry">
+                <!-- <label for="countrys">Страны</label>
+                <input list="country" id="countrys" name="countrys">
+                <datalist id="country">
+                    <option value="Испания"></option>
+                    <option value="Турция"></option>
+                    <option value="Египет"></option>
+                </datalist> -->
                 <h4 class="lowText">Страны</h4>
                 <div class="sectionBlock">
                     <ul class="sectionList">

@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter, Roboto;
+}
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+header {
+    background-color: #7413dc;
+    height: 440px;
+    padding: 20px 60px 60px 50px;
+}
+#informationContainer {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    gap: 40px;
+    justify-content: flex-end;    
+}
+#informationContainer a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.infoItem {
+    margin-right: 40px;
+}
+
+.infoList::before {
+    content: "🌐";
+}
+.settings {
+    display: flex;
+    flex-direction: column;
+}
+.settings h1{
+    align-items: flex-start;
+    color: #ffb6ff;
+    display: flex;
+    font-size: 44px;
+    letter-spacing: 2px;
+}
+.selectSearchType {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.selectType {
+    display: flex;
+    align-items: center;
+    background-color: #8853dd;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+    height: 25px;
+    justify-content: center;
+    text-decoration: none;
+    width: 120px;
+}
+#hotelSale::after{
+    display: flex;
+    background-color: #72b62b;
+    border-radius: 10px;
+    content: "-60%";
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    height: 15px;
+    width: 37px;
+}
+.selectSearchSettings {
+    display: flex;
+}
+#directionSetting {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr 2fr;
+    width: 70%;
+}
+.selectSettingsPassengers {
+    display: grid;
+}
+.selectSettingsPassengersBtn {
+    display: grid;
+    height: 70px;
+    width: 205px;
+}
+#passengersSetting {
+    display: grid; 
+}
+#searchTicket {
+    display: grid;
+    height: 80px;
+    width: 135px;
+}
+.selectSettings {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.selectSettings input {
+    border: none;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 10px;
+}
+.selectSettings::after { 
+    border-left: 2px solid #ccc;  
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%; 
+}
+.selectSettings label {
+    font-size: 12px;
+    left: 7px;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+}
