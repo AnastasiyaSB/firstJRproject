@@ -19,21 +19,28 @@ header {
     display: flex;
     flex-direction: row;
     font-size: 14px;
-    gap: 40px;
-    justify-content: flex-end;    
+    justify-content: flex-end; 
+    margin-right: 40px;
+     
 }
 #informationContainer a{
     color: white;
     font-size: 14px;
     text-decoration: none;
+    margin-right: 40px;
+}
+.infoList {
+    display: flex;
+    gap: 5px;
 }
 .infoItem {
     margin-right: 40px;
 }
 
-.infoList::before {
+.chooseLanguage::before {
     content: "🌐";
 }
+
 .settings {
     display: flex;
     flex-direction: column;
@@ -76,21 +83,74 @@ header {
     height: 15px;
     width: 37px;
 }
+#directionSetting {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 .selectSearchSettings {
     display: flex;
+
 }
-#directionSetting {
-    display: grid;
-    grid-template-columns: 3fr 3fr 2fr 2fr;
-    width: 70%;
+.selectSettings, .otherSelectSettings {
+    display: flex;
+    position: relative;
+}
+.selectSettings input, .otherSelectSettings input {
+    border: none;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 20px;
+    width: 290px;
+}
+.selectSettings::after {
+    border-left: 2px solid #ccc;  
+    content: '';
+    height: 70px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    /* width: 50%;  */
+}
+.otherSelectSettings::after {
+    border-left: 2px solid #ccc;  
+    content: '';
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 15px;
+    /*width: 50%; */
+}
+
+.selectSettings label, .otherSelectSettings label{
+    font-size: 12px;
+    left: 20px;
+    position: absolute;
+    top: 5%;
+    transform: translateY(-50%);
+}
+#departure, #return {
+    width: 190px;
 }
 .selectSettingsPassengers {
-    display: grid;
+    display: flex;
 }
 .selectSettingsPassengersBtn {
-    display: grid;
+    background-color: white;
+    border: none;
+    display: flex;
     height: 70px;
-    width: 205px;
+    position: relative;
+    width: 210px;
+
+}
+.selectSettingsPassengersBtn::after{
+    border-left: 2px solid #ccc;  
+    content: '';
+    height: 70px;
+    left: 0;
+    position: absolute;
+    top: 0px;
 }
 #passengersSetting {
     display: grid; 
@@ -100,29 +160,4 @@ header {
     height: 80px;
     width: 135px;
 }
-.selectSettings {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.selectSettings input {
-    border: none;
-    box-sizing: border-box;
-    height: 70px;
-    padding: 10px;
-}
-.selectSettings::after { 
-    border-left: 2px solid #ccc;  
-    content: '';
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 50%; 
-}
-.selectSettings label {
-    font-size: 12px;
-    left: 7px;
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-}
+
