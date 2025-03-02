@@ -89,14 +89,19 @@ header {
 #directionSetting {
     display: flex;
     flex-direction: row;
-    /*width: 100%;*/
+    width: 85%;
 }
 .selectSearchSettings {
     display: flex;
+    margin-bottom: 20px;
+    
 }
 .selectSettings, .otherSelectSettings {
     display: flex;
     position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 200px;
 }
 
 .selectSettings input, .otherSelectSettings input {
@@ -104,7 +109,7 @@ header {
     box-sizing: border-box;
     height: 70px;
     padding: 20px;
-    width: 320px;
+    width: 100%;
 }
 
 .selectSettings::after {
@@ -114,7 +119,6 @@ header {
     left: 0;
     position: absolute;
     top: 0px;
-    /* width: 50%;  */
 }
 .selectSettings:first-child::after {
     display: none; 
@@ -158,9 +162,6 @@ header {
     transform: translateY(-50%);
 }
 
-#departure, #return {
-    width: 190px;
-}
 .selectSettingsPassengers {
     display: flex;
 }
@@ -216,4 +217,94 @@ header {
     margin: 0 10px;
     width: 135px;
 }
+.additional-feature-link {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+main {
+    display: grid;
+    background-color: #eff1f4;
+}
+.offers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 165px;
+    padding: 10px 60px 10px 50px;
+}
+.extraOpportunityTelegramm, .extraOpportunityTickets {
+    background-color: #ffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 5px 20px;
+    
+}
+.opportunityList {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 5px;
+    padding: 5px 5px 5px 0;
+    width: 80%;
+    
+}
+.opportunityList li {
+    display: inline;
+    position: relative;
+    padding-left: 20px;
+    width: 45%;
+}
 
+.opportunityList li::before {
+    color: rgb(69, 180, 69);
+    content: '\2713'; 
+    font-size: 20px;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    
+}
+.extraOpportunityTelegramm {
+    background-image: url(/image/icons/message.png);
+    background-position: right 15px bottom;
+    background-repeat: no-repeat;
+    background-size: 110px;
+}
+.extraOpportunityTickets{
+    background-image: url(/image/icons/bus.png);
+    background-position: right bottom 10px;
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+.extraOpportunityLink {
+    background-color: #ffe8ed;
+    bottom: 10px;
+    color: #f74068;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.extraOpportunityLink:hover {
+    background-color: #f74068;
+    color: white;
+}
+.extraOpportunityTelegramm a {
+    width: 40%;
+    margin-bottom: 10px;
+}
+.extraOpportunityTickets a  {
+    width: 30%;
+    margin-top: 29px;
+}
+.mediumText {
+    margin: 15px 5px 5px 0;;
+}
