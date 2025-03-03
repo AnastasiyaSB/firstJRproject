@@ -2,22 +2,34 @@
     box-sizing: border-box;
     font-family: Inter, Roboto;
     font-size: 16px;
+    --button-color:  #f74068;
+    --deal-description-color: #878787;
+    --feedback-color: rgba(201, 201, 245, 0.9);
+    --header-background-color: #7413dc;
+    --header-name-color: #ffb6ff;
+    --sign-color: rgb(69, 180, 69);
+    --link-btn-color: #ffe8ed;
+    --link-color: rgb(9, 163, 239);
+    --main-color: #FFFFFF;
+    --main-background-color: #eff1f4;
+    --select-btn-color: #8853dd;
 }
+
 body {
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
     margin: 0;
     padding: 0;
     width: 100%;
 }
 header {
-    background-color: #7413dc;
+    background-color: var(--header-background-color);
     height: 440px;
     padding: 20px 60px 60px 50px;
     width: 100%;
 }
 #informationContainer {
     align-items: center;
-    color: white;
+    color: var(--main-color);
     display: flex;
     flex-direction: row;
     font-size: 14px;
@@ -26,7 +38,7 @@ header {
      
 }
 #informationContainer a{
-    color: white;
+    color: var(--main-color);
     font-size: 14px;
     text-decoration: none;
     margin-right: 40px;
@@ -50,7 +62,7 @@ header {
 }
 .settings h1{
     align-items: flex-start;
-    color: #ffb6ff;
+    color: var(--header-name-color);
     display: flex;
     font-size: 44px;
     letter-spacing: 2px;
@@ -64,9 +76,9 @@ header {
 .selectType {
     display: flex;
     align-items: center;
-    background-color: #8853dd;
+    background-color: var(--select-btn-color);
     border-radius: 20px;
-    color: white;
+    color: var(--main-color);
     cursor: pointer;
     display: flex;
     gap: 20px;
@@ -77,10 +89,10 @@ header {
 }
 #hotelSale::after{
     display: flex;
-    background-color: #72b62b;
+    background-color: var(--sign-color);
     border-radius: 10px;
     content: "-60%";
-    color: white;
+    color: var(--main-color);
     font-size: 13px;
     font-weight: bold;
     height: 15px;
@@ -124,7 +136,7 @@ header {
     display: none; 
 }
 .selectSettings input:focus, .otherSelectSettings input:focus {
-    border: 2px solid #ff0000;
+    border: 2px solid #5677db;
     outline: none; 
 }
 .otherSelectSettings::after {
@@ -166,7 +178,7 @@ header {
     display: flex;
 }
 .selectSettingsPassengersBtn {
-    background-color: white;
+    background-color: var(--main-color);
     border: none;
     border-radius: 0 7px 7px 0;
     display: flex;
@@ -192,7 +204,7 @@ header {
     top: 0px;
 }
 #passengersSetting {
-    background-color: #fff;
+    background-color: var(--main-color);
     border-radius: 10px;
     box-shadow: 0px 0px 9px 0.2px #ccc;
     display: none;
@@ -207,9 +219,9 @@ header {
 
 #searchTicket {
     align-items: center;
-    background-color: #f74068;
+    background-color: var(--button-color);
     border-radius: 7px;
-    color: white;
+    color: var(--main-color);
     display: flex; 
     font-weight: bold;
     justify-content: center;
@@ -218,13 +230,13 @@ header {
     width: 135px;
 }
 .additional-feature-link {
-    color: white;
+    color: var(--main-color);
     font-size: 14px;
     text-decoration: none;
 }
 main {
     display: grid;
-    background-color: #eff1f4;
+    background-color: var(--main-background-color);
 }
 .offers {
     display: grid;
@@ -233,7 +245,7 @@ main {
     padding: 10px 60px 10px 50px;
 }
 .extraOpportunityTelegramm, .extraOpportunityTickets {
-    background-color: #fff;
+    background-color: var(--main-color);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -261,7 +273,7 @@ main {
 }
 
 .opportunityList li::before {
-    color: rgb(69, 180, 69);
+    color: var(--sign-color);
     content: '\2713'; 
     font-size: 20px;
     font-weight: bold;
@@ -284,9 +296,9 @@ main {
     background-size: 200px;
 }
 .extraOpportunityLink {
-    background-color: #ffe8ed;
+    background-color: var(--link-btn-color);
     bottom: 10px;
-    color: #f74068;
+    color: var(--button-color);
     display: inline-block;
     font-weight: bold;
     padding: 10px;
@@ -294,8 +306,8 @@ main {
     text-decoration: none;
 }
 .extraOpportunityLink:hover {
-    background-color: #f74068;
-    color: #fff;
+    background-color: var(--button-color);
+    color: var(--main-color);
 }
 .extraOpportunityTelegramm a {
     width: 40%;
@@ -316,7 +328,7 @@ main {
     position: relative;
 }
 .destinationsList, .airlinesList {
-    background-color: #fff;
+    background-color: var(--main-color);
     border-radius: 8px;
     margin: 10px;
     min-height: 360px;
@@ -338,7 +350,7 @@ main {
     border-bottom: none;
 }
 .price {
-    color: #f74068;
+    color: var(--button-color);
 }
 
 .topAirlinesHeader {
@@ -352,7 +364,7 @@ main {
     margin: 5px;   
 }
 #moreInfoLink {
-    color:rgb(9, 163, 239);
+    color: var(--link-color);
     text-decoration: none;
 }
 .popularDestinations h2 {
@@ -366,7 +378,7 @@ main {
 }
 .airlinesItem {
     align-items: center;
-    color:rgb(9, 163, 239);
+    color: var(--link-color);
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -375,7 +387,7 @@ main {
     color: black;
 }
 .airlinesItemStar::before {
-    color: #f74068;
+    color: var(--button-color);
     content: '\2605';
     font-size: 20px;
     margin-right: 5px;
@@ -396,7 +408,7 @@ main {
     margin: 10px 0 15px 20px;
 }
 .blockHotDeals {
-    background-color: #fff;
+    background-color: var(--main-color);
     border-radius: 8px;
     margin: 0px 17px;
     padding: 10px 90px 10px 15px;
@@ -406,7 +418,7 @@ main {
     padding: 7px 0;
 }
 .dealDescription {
-    color: #878787;
+    color: var(--deal-description-color);
     font-size: 16px;
     margin: 5px 0 15px 0;
 }
@@ -420,7 +432,7 @@ main {
     padding: 0 8px;
 }
 .faqContainer {
-    background-color: #fff;
+    background-color: var(--main-color);
     border-radius: 8px;
     display: flex;
     padding: 10px;
@@ -438,11 +450,11 @@ main {
     
 }
 .faqItem a {
-    color:rgb(9, 163, 239);
+    color: var(--link-color);
     text-decoration: none;
 }
 .feedback {
-    background-color: rgba(201, 201, 245, 0.9);
+    background-color: var(--feedback-color);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
