@@ -233,7 +233,7 @@ main {
     padding: 10px 60px 10px 50px;
 }
 .extraOpportunityTelegramm, .extraOpportunityTickets {
-    background-color: #ffff;
+    background-color: #fff;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -295,7 +295,7 @@ main {
 }
 .extraOpportunityLink:hover {
     background-color: #f74068;
-    color: white;
+    color: #fff;
 }
 .extraOpportunityTelegramm a {
     width: 40%;
@@ -305,6 +305,161 @@ main {
     width: 30%;
     margin-top: 29px;
 }
-.mediumText {
+.offerText {
     margin: 15px 5px 5px 0;;
+}
+
+.flightContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px 60px 10px 50px;
+    position: relative;
+}
+.destinationsList, .airlinesList {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px;
+    min-height: 360px;
+}
+.destinationsList {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    margin: 15px;
+}
+.destinationsItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 15px;
+    border-bottom: 1px solid #ccc;
+}
+.destinationsItem:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+.price {
+    color: #f74068;
+}
+
+.topAirlinesHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.flyText {
+    font-size: 17px;
+    margin: 5px;   
+}
+#moreInfoLink {
+    color:rgb(9, 163, 239);
+    text-decoration: none;
+}
+.popularDestinations h2 {
+    padding: 0 10px;
+}
+.airlinesList {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    gap: 5px;
+}
+.airlinesItem {
+    align-items: center;
+    color:rgb(9, 163, 239);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.airlinesItemStar {
+    color: black;
+}
+.airlinesItemStar::before {
+    color: #f74068;
+    content: '\2605';
+    font-size: 20px;
+    margin-right: 5px;
+}
+.containerWorkWithCustomers {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0px 60px 10px 50px;
+    position: relative;
+}
+.containerhotDeals {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.dealText {
+    font-size: 17px;
+    margin: 10px 0 15px 20px;
+}
+.blockHotDeals {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0px 17px;
+    padding: 10px 90px 10px 15px;
+}
+.dealLowText {
+    margin: 0;
+    padding: 7px 0;
+}
+.dealDescription {
+    color: #878787;
+    font-size: 16px;
+    margin: 5px 0 15px 0;
+}
+.faq {
+    display: flex;
+    flex-direction: column;
+}
+.faqText {
+    font-size: 17px;
+    margin: 5px;
+    padding: 0 8px;
+}
+.faqContainer {
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    padding: 10px;
+    margin: 14px 0 14px 5px;
+}
+.faqList {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 12px;
+    padding: 0;
+}
+.faqItem {
+    list-style: none;
+    margin-bottom: 15px;
+    
+}
+.faqItem a {
+    color:rgb(9, 163, 239);
+    text-decoration: none;
+}
+.feedback {
+    background-color: rgba(201, 201, 245, 0.9);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 5px;
+    min-height: 250px;
+    padding: 25px;
+    background-image: url(/image/icons/laptop.png);
+    background-position: right top 25px;
+    background-repeat: no-repeat;
+    background-size: 15rem;
+    
+}
+#feedbackHead {
+    font-size: 22px;
+    font-weight: 400;
+    width: 55%;
+}
+#receiveEmail {
+    margin-top: auto;
 }
