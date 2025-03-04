@@ -74,7 +74,6 @@ header {
     text-align: center;
 }
 .select-type {
-    display: flex;
     align-items: center;
     background-color: var(--select-btn-color);
     border-radius: 20px;
@@ -149,7 +148,7 @@ header {
     /*width: 50%; */
 }
 #return {
-    background-image: url(/image/icons/free-icon-calendar-7827944.svg);
+    background-image: url(../image/icons/free-icon-calendar-7827944.svg);
     background-position: right 15px center;
     background-repeat: no-repeat;
     background-size: 22px;
@@ -284,13 +283,13 @@ main {
     
 }
 .extra-opportunity-telegramm {
-    background-image: url(/image/icons/message.png);
+    background-image: url(../image/icons/message.png);
     background-position: right 15px bottom;
     background-repeat: no-repeat;
     background-size: 110px;
 }
 .extra-opportunity-tickets {
-    background-image: url(/image/icons/bus.png);
+    background-image: url(../image/icons/bus.png);
     background-position: right bottom 10px;
     background-repeat: no-repeat;
     background-size: 200px;
@@ -461,7 +460,7 @@ main {
     margin: 10px 0 10px 5px;
     min-height: 250px;
     padding: 25px;
-    background-image: url(/image/icons/laptop.png);
+    background-image: url(../image/icons/laptop.png);
     background-position: right top 25px;
     background-repeat: no-repeat;
     background-size: 15rem;
