@@ -12,6 +12,7 @@
     --link-color: rgb(9, 163, 239);
     --main-color: #FFFFFF;
     --main-background-color: #eff1f4;
+    --main-text-color: #000000;
     --select-btn-color: #8853dd;
 }
 
@@ -24,8 +25,10 @@ body {
 header {
     background-color: var(--header-background-color);
     height: 440px;
-    padding: 20px 60px 60px 50px;
+    padding: 20px 0 60px 0;
     width: 100%;
+    padding-left: 10vw; 
+    padding-right: 10vw;
 }
 #information-container {
     align-items: center;
@@ -236,12 +239,14 @@ header {
 main {
     display: grid;
     background-color: var(--main-background-color);
+    padding-left: 10vw; 
+    padding-right: 10vw;
 }
 .offers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     min-height: 165px;
-    padding: 10px 60px 10px 50px;
+    padding: 10px 0px 10px 00px;
 }
 .extra-opportunity-telegramm, .extra-opportunity-tickets {
     background-color: var(--main-color);
@@ -323,7 +328,7 @@ main {
 .flight-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 10px 60px 10px 50px;
+    padding: 10px 0px 10px 0px;
     position: relative;
 }
 .destinations-list, .airlines-list {
@@ -394,7 +399,7 @@ main {
 .container-work-with-customers {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 0px 60px 10px 50px;
+    padding-bottom: 10px;
     position: relative;
 }
 .container-hot-deals {
@@ -473,4 +478,63 @@ main {
 }
 #receive-email {
     margin-top: auto;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    padding-left: 10vw; 
+    padding-right: 10vw;
+}
+.footer-logo-company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+/* .section-country,
+.section-city,
+.section-direction,
+.section-airport,
+.section-airline {
+    margin: 5px 10px;
+    padding: 5px;
+} */
+.section-country {
+    margin: 0.3rem 6.87rem 0.3rem 0.8rem;
+}
+.section-city {
+    margin: 0.3rem 4.68rem 0.3rem 0.8rem;
+}
+.section-direction {
+    margin: 0.3rem 0 0.3rem 0.8rem;
+}
+.section-airport {
+    margin: 0.3rem 1.25rem 0.3rem 0.8rem;
+}
+.footer-text, 
+.section-all-items {
+    margin: 10px 0;
+}
+.section-list {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0px;
+}
+.section-item a, .section-all-items a {
+    font-size: 14px;
+}
+.section-item a{
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+.section-all-items a{
+    color: var(--link-color);
+    text-decoration: none;
 }
