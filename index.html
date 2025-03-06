@@ -15,15 +15,26 @@
         <nav id="information-container">
             <a href="#">Корпоративным клиентам</a>
             <div class="info-list">
-                <label for="air-tickets">Авиабилеты</label>
-                <select name="air-tickets" id="air-tickets" class="info-item"></select>
-                <label for="information">Справка</label>
-                <select name="information" id="information" class="info-item"></select>
+                <select name="air-tickets" id="tickets" class="info-item">
+                    <option value="air-tickets">Авиабилеты</option>
+                    <option value="train-tickets">Ж/д билеты</option>
+                    <option value="bus-tickets">Автобусы</option>
+                    <option value="hotel">Отели</option>
+                    <option value="insurance">Страхование</option>
+                </select>
+                <select name="information" id="information" class="info-item">
+                    <option value="info">Справка</option>
+                    <option value="faq">Вопросы</option>
+                </select>
             </div>
             <div class="choose-language">
                 <img src="../image/logo.png/globe-solid.svg" alt="globe" width="20px" height="20px">
-                <label for="language">Русский</label>
-                <select name="language" id="language" class="info-item"></select>
+                <select name="language" id="language" class="info-item">
+                    <option value="ru" selected>Русский</option>
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                </select>
             </div>
         </nav>
 
@@ -200,7 +211,7 @@
                 <aside class="feedback">
                     <p id="feedback-head">Лучшие предложения для путешествий</p>
                     <form action="" method="post" id="receive-email">
-                        <label for="email">Email</label>
+                        <!-- <label for="email">Email</label> -->
                         <input type="email" id="email" placeholder="Email *">
                         <button id="send-email">Подписаться</button>
                     </form>  
@@ -299,13 +310,13 @@
                 <div class="section-all-items"><a href="#">Карта сайта →</a></div>
             </div>
         </div>
-        <div>
-            <div class="footer-link">
+        <div class="footer-links">
+            <div class="footer-app">
                 <a href="#" class="footer-link-programm">Партнерская программа</a>
                 <a href="#" class="footer-link-store"><img src="../image/logo.png/google pay.png" alt="google pay">Google Play</a>
                 <a href="#" class="footer-link-store"><img src="../image/logo.png/apple.png" alt="app Store">App Store</a>
             </div>
-            <div>
+            <div class="footer-messagers">
                 <img src="../image/logo.png/facebook.png" alt="facebook" width="40px" height="40px"> 
                 <img src="../image/logo.png/inst.png" alt="instagram" width="40px" height="40px">
                 <img src="../image/logo.png/telegram.png" alt="telegram" width="40px" height="40px">
