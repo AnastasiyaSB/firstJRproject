@@ -26,7 +26,7 @@ body {
 }
 header {
     background-color: var(--header-background-color);
-    height: 440px;
+    min-height: 440px;
     padding: 20px 0 60px 0;
     width: 100%;
     padding-left: 10vw; 
@@ -42,20 +42,25 @@ header {
     margin-right: 40px;
      
 }
-#information-container a{
-    color: var(--main-color);
-    font-size: 16px;
-    text-decoration: none;
-    margin-right: 40px;
-    padding: 5px;
-}
-#information-container a:hover {
-    background-color:  var(--select-btn-color);
-    border-radius: 20px;
+.menu-btn {
+    display: none;
 }
 .info-list {
     display: flex;
     gap: 5px;
+    position: relative;
+}
+.info-list a{
+    color: var(--main-color);
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0 40px;
+    padding: 5px;
+    gap: 0;
+}
+.info-list a:hover {
+    background-color:  var(--select-btn-color);
+    border-radius: 20px;
 }
 .info-item {
     margin-right: 40px;
@@ -64,6 +69,7 @@ header {
     align-items: center;
     display: flex;
     gap: 5px;
+    position: relative;
 }
 #language, #tickets, #information {
     background-color: var(--header-background-color);
@@ -92,6 +98,7 @@ header {
 }
 .select-search-type {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
     text-align: center;
@@ -107,7 +114,7 @@ header {
     height: 25px;
     justify-content: center;
     text-decoration: none;
-    width: 120px;
+    width: 115px;
 }
 .select-type:hover {
     background-color:  var(--feedback-color);
@@ -649,7 +656,7 @@ footer {
     text-decoration: none;
 }
 .footer-link-store img{
-    left: 0.5vw;
+    left: 2.2vw;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -659,4 +666,278 @@ footer {
 }
 .footer-messagers img{
     margin: 0 2px;
+}
+
+@media screen and (max-width:768px) {
+    header, main {
+        padding: 15px;
+    }
+    footer {
+        padding: 15px 0;
+    }
+    #information-container {
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+    }
+    .menu-btn {
+        background-color: transparent;
+        border: none;
+        color: var(--main-color);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 25px;
+        padding: 0;
+        position: absolute;
+        right: 1vw;
+        top: 1vh;
+
+    }
+    #globe-btn {
+        background-color: transparent;
+        border: none;
+        color: var(--main-color);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 30px;
+        position: absolute;
+        right: 12vw;
+        top: 2vh;
+
+    }
+    .info-list, #language {
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+    
+    .info-list.show, #language.show {
+        align-items: center;
+        background-color: var(--select-btn-color);
+        border-radius: 7px;
+        display: flex;
+        position: absolute;
+        top: 4vh;
+        right: 2vw;
+        z-index: 2;
+        
+    }
+    .info-item, .info-list a {
+        appearance: none;
+        display: flex;
+        flex-direction: column;
+        font-size: 2.3vh;
+        margin: 0;
+    }
+    #tickets, #information, .info-list a {
+        background-color: var(--select-btn-color);
+        padding: 0.5rem;
+    }
+    #tickets:hover, #information:hover, .info-list a:hover {
+        background-color: var(--header-background-color);
+    } 
+    #language {
+        appearance: none;
+        display: none;
+        flex-direction: column;
+        font-size: 2.3vh;
+        margin-right: 0;
+        padding: 0.5rem;
+    }
+    .select-search-type {
+        justify-content: center;
+    }
+    .settings h1 {
+        margin-top: 7vh;
+        font-size: 3.5vh;
+        line-height: 2.9vh;
+    }
+    .select-type {
+        font-size: 2.2vh;
+        gap: 2vw;
+        width: 38vw;
+    }
+    #hotel-sale::after {
+        font-size: 1.7vh;
+        align-items: center;
+        justify-content: center;
+    }
+    #direction-setting, .select-settings-passengers {
+        box-sizing: border-box;
+        display: grid;
+        min-width: 100%;
+        width: 100%;
+    }
+    #from {
+        border-radius: 7px 7px 0 0;
+    }
+    #return {
+        border-radius: 0;
+    }
+    .select-settings, .other-select-settings {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        margin: 0;
+    }
+    .select-settings::after, .other-select-settings::after, .select-settings-passengers-btn::after {
+        border-left: none;
+    }
+    .select-settings-passengers-btn {
+        border-radius: 0 0 7px 7px;
+    }
+
+    .select-search-settings {
+        display: grid;
+        grid-auto-flow: row;
+        margin-bottom: 2vh;
+    }
+    #search-ticket {
+        margin: 1vh 0;
+        width: 100%;
+    }
+    .additional-feature-link {
+        margin: 2vh 0;
+        width: 100%;
+        padding: 5px;
+    }
+    main {
+        display: grid;
+        grid-template-rows: 4 1fr;
+    }
+    .offers, .flight-container, .container-work-with-customers, .container-for-requests {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .extra-opportunity-telegramm, .extra-opportunity-tickets {
+        background-image: none;
+        padding: 10px;
+    }
+    .extra-opportunity-telegramm a, .extra-opportunity-tickets a {
+        width: 100%;
+    }
+    .flight-container {
+        grid-template-columns: 1fr;
+    }
+    .destinations-list {
+        grid-template-columns: 1fr;
+    }
+    .block-hot-deals {
+        margin: 2vh 1vw 2vh;
+        padding: 1.5vh 4vw;
+    }
+    .footer-logo-company {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+        gap: 10px; 
+        justify-items: space-around;
+        margin: 5px 12px;
+    }
+    #logo-iata {
+        width: 135px;
+        height: 40px;
+    }
+    #logo-pci {
+        width: 125px;
+        height: 40px;
+    }
+    #logo-visa {
+        width: 64px;
+        height: 25px;
+    }
+    #logo-mastercard {
+        width: 60px;
+        height: 37px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 2px;
+        margin: 5px 0;
+        padding: 7px 0;
+    }
+    .footer-container > div {
+        border-bottom: 1px solid var(--line-color);
+        padding: 0 14px;
+    }
+    .footer-container div:first-child {
+        border-top: 1px solid var(--line-color);
+    }
+    .footer-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-text::after {
+        color: var(--line-color);
+        content: "›";
+        font-size: 4vh;
+    }
+    .section-list  {
+        display: none;
+    }
+    .section-list.show {
+        display: block;
+    }
+    .section-all-items {
+        display: none;
+    }
+    .footer-section-items {
+        border: none;
+    }
+    .footer-links {
+        border-top: none;
+    }
+    .section-item {
+        align-items: center;
+        background-color: var(--main-background-color);
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-between;
+        margin: 1vh 1vw;
+        padding: 0.2vh 2vw;
+    }
+    .section-item::after {
+        color: var(--deal-description-color);
+        content: "›";
+        font-size: 4vh;
+    }
+    .section-item a{
+        font-size: 16px;
+    }
+    .footer-links {
+        margin: 2vh 6vw;
+        padding: 2vh 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footer-app {
+        display: flex;
+        align-items: center;
+        gap: 3vh;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-link-programm {
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+        width: 80%;
+    }
+    .footer-link-store {
+        flex-direction: row;
+        align-items: center;
+    }
+    .footer-messagers {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3vh;
+        width: 100%;
+    }
 }
